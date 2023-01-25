@@ -1,0 +1,426 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  max-width: 100%;
+  height: 100px;
+  overflow-y: scroll; /* Tambahkan kemampuan untuk melakukan scrolling */
+}
+
+/* Sembunyikan scrollbar dari Chrome, Safari dan Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  --body: #ffffff;
+  --text1: black;
+  --text2: #a8d1d1;
+  --emialbx: #f5f5f5;
+  --stroke: #6c6363;
+  --cText: black;
+}
+/* Sembunyikan scrollbar untuk IE, Edge dan Firefox */
+body {
+  -ms-overflow-style: none; /* IE dan Edge */
+  scrollbar-width: none; /* Firefox */
+  background-color: var(--body);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+
+/* Mobile versi dulu */
+@media screen and (min-width: 300px) and (max-width: 576px) {
+  body {
+    background-color: var(--body);
+  }
+  .container {
+    width: 100%;
+    height: 150vh;
+  }
+
+  .text {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .textHeader {
+    width: 85%;
+    height: 100px;
+    margin-top: 60px;
+  }
+
+  .textHeader h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 23px;
+  }
+
+  .textHeader h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 19px;
+    margin-left: 10px;
+    color: var(--text2);
+  }
+
+  .boxImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .boxImg img {
+    width: 330px;
+    height: 330px;
+  }
+
+  .login {
+    height: 200px;
+    display: grid;
+    grid-template-rows: 50% 23%;
+  }
+
+  .email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .img {
+    width: 55%;
+    height: 40px;
+    border: 2px solid #6c6363;
+    background-color: var(--emialbx);
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .img img {
+    margin: 5px;
+    width: 35px;
+    height: 35px;
+  }
+  .img input[type="email"] {
+    outline: none;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: whitesmoke;
+  }
+
+  .img input[type="email"]::-webkit-input-placeholder {
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    opacity: 60%;
+  }
+
+  .password {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .imgpassword {
+    width: 55%;
+    height: 40px;
+    border: 2px solid #6c6363;
+    background-color: var(--emialbx);
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .imgpassword img {
+    margin: 5px;
+    width: 33px;
+    height: 33px;
+  }
+  .imgpassword input[type="password"] {
+    outline: none;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: whitesmoke;
+    margin-left: 3px;
+  }
+
+  .imgpassword input[type="password"]::-webkit-input-placeholder {
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    opacity: 60%;
+  }
+
+  .forget {
+    margin-top: 2px;
+    width: 55%;
+    height: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .forget h5 {
+    text-align: right;
+  }
+
+  .forget h5 a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    opacity: 95%;
+    cursor: pointer;
+
+  }
+
+  .submit {
+    width: 45%;
+    height: 40px;
+    background-color: var(--text2);
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .submit button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+  }
+
+  .sigup {
+    display: flex;
+    justify-content: center;
+    height: 40px;
+  }
+
+  .sign p {
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: #C0C0C0;
+  }
+
+  .sign p a {
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: skyblue;
+    text-decoration: none;
+  }
+}
+
+
+
+
+
+
+/* Mobile versi sekarang */
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  body {
+    background-color: red;
+  }
+  .container {
+    width: 100%;
+    height: 150vh;
+  }
+
+  .text {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .textHeader {
+    width: 85%;
+    height: 100px;
+    margin-top: 60px;
+  }
+
+  .textHeader h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 23px;
+  }
+
+  .textHeader h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 19px;
+    margin-left: 10px;
+    color: var(--text2);
+  }
+
+  .boxImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .boxImg img {
+    width: 330px;
+    height: 330px;
+  }
+
+  .login {
+    height: 200px;
+    display: grid;
+    grid-template-rows: 50% 23%;
+  }
+
+  .email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .img {
+    width: 55%;
+    height: 40px;
+    border: 2px solid #6c6363;
+    background-color: var(--emialbx);
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .img img {
+    margin: 5px;
+    width: 35px;
+    height: 35px;
+  }
+  .img input[type="email"] {
+    outline: none;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: whitesmoke;
+  }
+
+  .img input[type="email"]::-webkit-input-placeholder {
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    opacity: 60%;
+  }
+
+  .password {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .imgpassword {
+    width: 55%;
+    height: 40px;
+    border: 2px solid #6c6363;
+    background-color: var(--emialbx);
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .imgpassword img {
+    margin: 5px;
+    width: 33px;
+    height: 33px;
+  }
+  .imgpassword input[type="password"] {
+    outline: none;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: whitesmoke;
+    margin-left: 3px;
+  }
+
+  .imgpassword input[type="password"]::-webkit-input-placeholder {
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    opacity: 60%;
+  }
+
+  .forget {
+    margin-top: 2px;
+    width: 55%;
+    height: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .forget h5 {
+    text-align: right;
+  }
+
+  .forget h5 a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    opacity: 95%;
+    cursor: pointer;
+
+  }
+
+  .submit {
+    width: 45%;
+    height: 40px;
+    background-color: var(--text2);
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .submit button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+  }
+
+  .sigup {
+    display: flex;
+    justify-content: center;
+    height: 40px;
+  }
+
+  .sign p {
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: #C0C0C0;
+  }
+
+  .sign p a {
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: skyblue;
+    text-decoration: none;
+  }
+}
